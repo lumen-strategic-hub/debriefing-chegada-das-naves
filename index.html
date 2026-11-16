@@ -58,6 +58,16 @@ tr.good td:first-child{box-shadow:inset 4px 0 var(--good)}
 .bt{background:var(--bg);border-radius:4px;height:12px;overflow:hidden}.bf{display:block;height:100%;background:var(--accent);border-radius:4px}
 .bn{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}.bn i{font-style:normal;color:var(--mute);font-size:.8rem}
 ul{margin:0;padding-left:20px;display:grid;gap:8px}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.cr{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;min-width:0}
+.cr.hi{border-color:var(--good);box-shadow:0 0 0 1px var(--good)}
+.cr .ph{background:var(--line);aspect-ratio:4/5;max-width:100%}
+.cr img{width:100%;height:100%;object-fit:cover;display:block}
+.cr .tx{padding:10px 12px;display:grid;gap:2px;font-size:.85rem;align-content:start}
+.cr .tx b{font:600 .95rem var(--body);overflow-wrap:anywhere}
+.cr .n{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:.78rem}
+.rk{font:500 .68rem var(--mono);color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.cr.hi .rk{color:var(--good)}.mute{color:var(--mute)}
 .note{background:var(--warnbg);border-radius:10px;padding:14px 18px}
 </style>
 </head>
@@ -227,6 +237,17 @@ ul{margin:0;padding-left:20px;display:grid;gap:8px}
 <div class="kpi"><b>R$ 29.853</b><span>em compras atribuídas aos anúncios, 5,1 vezes o investido</span></div>
 </div>
 <h3>Criativos da Vivência, do mais clicado ao menos</h3>
+<div class="gal"><figure class="cr hi"><div class="ph"><img src="img/vid05.jpg" alt="Anúncio VID- 05" loading="lazy"></div><figcaption class="tx"><span class="rk">mais clicado</span><b>VID- 05</b><span class="n">301 cliques · 8 compras</span><span class="n mute">R$ 36,51 por compra</span></figcaption></figure>
+<figure class="cr"><div class="ph"><img src="img/vid041.jpg" alt="Anúncio VID- 04 - 1" loading="lazy"></div><figcaption class="tx"><span class="rk">vídeo</span><b>VID- 04 - 1</b><span class="n">243 cliques · 13 compras</span><span class="n mute">R$ 43,05 por compra</span></figcaption></figure>
+<figure class="cr"><div class="ph"><img src="img/vid01.jpg" alt="Anúncio VID- 01" loading="lazy"></div><figcaption class="tx"><span class="rk">vídeo</span><b>VID- 01</b><span class="n">185 cliques · 13 compras</span><span class="n mute">R$ 38,59 por compra</span></figcaption></figure>
+<figure class="cr"><div class="ph"><img src="img/vid061.jpg" alt="Anúncio VID- 06 - 1" loading="lazy"></div><figcaption class="tx"><span class="rk">vídeo</span><b>VID- 06 - 1</b><span class="n">185 cliques · 10 compras</span><span class="n mute">R$ 29,99 por compra</span></figcaption></figure>
+<figure class="cr"><div class="ph"><img src="img/vid042.jpg" alt="Anúncio VID- 04 - 2" loading="lazy"></div><figcaption class="tx"><span class="rk">vídeo</span><b>VID- 04 - 2</b><span class="n">173 cliques · 9 compras</span><span class="n mute">R$ 50,02 por compra</span></figcaption></figure>
+<figure class="cr"><div class="ph"><img src="img/v072.jpg" alt="Anúncio 07 - 2" loading="lazy"></div><figcaption class="tx"><span class="rk">vídeo</span><b>07 - 2</b><span class="n">170 cliques · 12 compras</span><span class="n mute">R$ 40,76 por compra</span></figcaption></figure>
+<figure class="cr"><div class="ph"><img src="img/est3.jpg" alt="Anúncio EST- 3" loading="lazy"></div><figcaption class="tx"><span class="rk">imagem</span><b>EST- 3</b><span class="n">168 cliques · 5 compras</span><span class="n mute">R$ 83,62 por compra</span></figcaption></figure>
+<figure class="cr"><div class="ph"><img src="img/vid062.jpg" alt="Anúncio VID- 06 - 2" loading="lazy"></div><figcaption class="tx"><span class="rk">vídeo</span><b>VID- 06 - 2</b><span class="n">166 cliques · 3 compras</span><span class="n mute">R$ 100,43 por compra</span></figcaption></figure>
+<figure class="cr"><div class="ph"><img src="img/est4.jpg" alt="Anúncio EST- 4" loading="lazy"></div><figcaption class="tx"><span class="rk">imagem</span><b>EST- 4</b><span class="n">162 cliques · 16 compras</span><span class="n mute">R$ 31,16 por compra</span></figcaption></figure>
+<figure class="cr hi"><div class="ph"><img src="img/est2.jpg" alt="Anúncio EST- 2" loading="lazy"></div><figcaption class="tx"><span class="rk">mais vendeu</span><b>EST- 2</b><span class="n">160 cliques · 21 compras</span><span class="n mute">R$ 22,41 por compra</span></figcaption></figure></div>
+<p class="legend">Os 10 anúncios que concentraram 86% do investimento da Vivência. Nos vídeos, a imagem é a capa.</p>
 <div class="tw"><table>
 <thead><tr><th>Criativo</th><th class="n">Cliques no link</th><th class="n">Visitas à página</th><th class="n">Investido</th><th class="n">Compras</th><th class="n">Custo por compra</th><th class="n">Valor das compras</th></tr></thead>
 <tbody><tr><td>VID- 05</td><td class="n barc"><span class="hb" style="width:100%"></span><span class="hv">301</span></td><td class="n">216</td><td class="n">R$ 292,06</td><td class="n">8</td><td class="n">R$ 36,51</td><td class="n">R$ 694</td></tr>
@@ -248,6 +269,9 @@ ul{margin:0;padding-left:20px;display:grid;gap:8px}
 <tr><td>AD- EST- 04- ULTIMOS DIAS</td><td class="n barc"><span class="hb" style="width:0%"></span><span class="hv">1</span></td><td class="n">1</td><td class="n">R$ 20,12</td><td class="n">0</td><td class="n">sem compra</td><td class="n">0</td></tr></tbody></table></div>
 <p class="legend">O mais clicado foi o VID- 05 (301 cliques). O que mais vendeu foi o EST- 2: 21 compras a R$ 22,41 cada e R$ 9.972 em valor, porque parte de quem clicou nele comprou depois o Processo. VID- 01 e VID- 04 - 1 vêm em seguida, com 13 compras cada.</p>
 <h3>Criativos do Processo (campanha no ar de 28/10 a 13/11)</h3>
+<div class="gal"><figure class="cr hi"><div class="ph"><img src="img/s01.jpg" alt="Anúncio stories-01-a-convocacao" loading="lazy"></div><figcaption class="tx"><span class="rk">mais clicado e mais vendeu</span><b>stories-01-a-convocacao</b><span class="n">157 cliques · 4 compras</span><span class="n mute">R$ 69,85 por compra</span></figcaption></figure>
+<figure class="cr"><div class="ph"><img src="img/s02.jpg" alt="Anúncio stories-02-seu-lugar" loading="lazy"></div><figcaption class="tx"><span class="rk">imagem</span><b>stories-02-seu-lugar</b><span class="n">91 cliques · 0 compras</span><span class="n mute">R$ 152,42 investidos</span></figcaption></figure>
+<figure class="cr"><div class="ph"><img src="img/dfe.jpg" alt="Anúncio DfE7FB5lcxj" loading="lazy"></div><figcaption class="tx"><span class="rk">imagem</span><b>DfE7FB5lcxj</b><span class="n">70 cliques · 1 compra</span><span class="n mute">R$ 122,73 por compra</span></figcaption></figure></div>
 <div class="tw"><table>
 <thead><tr><th>Criativo</th><th class="n">Cliques no link</th><th class="n">Visitas à página</th><th class="n">Investido</th><th class="n">Compras</th><th class="n">Custo por compra</th><th class="n">Valor das compras</th></tr></thead>
 <tbody><tr class="good"><td>stories-01-a-convocacao</td><td class="n barc"><span class="hb" style="width:100%"></span><span class="hv">157</span></td><td class="n">97</td><td class="n">R$ 279,41</td><td class="n">4</td><td class="n">R$ 69,85</td><td class="n">R$ 3.159</td></tr>
