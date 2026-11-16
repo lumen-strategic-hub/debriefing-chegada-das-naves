@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<style>body{margin:0}img{max-width:100%}</style>
+<title>Debriefing Chegada das Naves</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Relatório de leitura: coluna única, o dinheiro primeiro (do faturamento ao bolso), depois vendas, origem e anúncios. Mesmo sistema dos relatórios anteriores da Giovana. */
+:root{--bg:#f6f5fb;--card:#fff;--fg:#1d1a2e;--mute:#6b6684;--line:#dcd8ea;--accent:#5b46b8;--accent2:#b98a25;--good:#1f7a4d;--goodbg:#e4f3ea;--cut:#b9b4cf;--warnbg:#fff4df;
+--display:"Fraunces",Georgia,serif;--body:"Source Sans 3",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14121f;--card:#1d1a2c;--fg:#ebe8f5;--mute:#a19cba;--line:#332f48;--accent:#a996ff;--accent2:#e2c06a;--good:#7fd3a5;--goodbg:#173327;--cut:#4a4566;--warnbg:#3a2e14;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14121f;--card:#1d1a2c;--fg:#ebe8f5;--mute:#a19cba;--line:#332f48;--accent:#a996ff;--accent2:#e2c06a;--good:#7fd3a5;--goodbg:#173327;--cut:#4a4566;--warnbg:#3a2e14;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--body)}
+main{max-width:920px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0}
+h1{font-size:2.1rem;line-height:1.15}h2{font-size:1.35rem}h3{font-size:1.05rem}
+p{margin:0}
+.eyebrow{font:500 .75rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.sub{color:var(--mute);margin-top:6px}
+section{display:grid;gap:14px;min-width:0}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;display:grid;gap:18px}
+.big{font:500 clamp(2.4rem,8vw,3.6rem)/1 var(--mono);font-variant-numeric:tabular-nums;color:var(--good);letter-spacing:-.02em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;min-width:0}
+.hero .kpi{background:var(--bg)}
+.kpi b{display:block;font:500 1.4rem var(--mono);font-variant-numeric:tabular-nums}
+.kpi span{color:var(--mute);font-size:.88rem}
+.flow{display:flex;height:34px;border-radius:8px;overflow:hidden;gap:2px}
+.flow span{display:block;min-width:0}
+.f1{background:var(--good)}.f2{background:var(--cut)}.f3{background:var(--accent2)}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{padding:8px 12px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap;vertical-align:middle}
+th{font:500 .72rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+td.n,th.n{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+td.w{white-space:normal;min-width:200px}
+tr:last-child td{border-bottom:0}
+tr.sum td{font-weight:600;background:var(--bg)}
+tr.win td{font-weight:600;background:var(--goodbg);color:var(--good)}
+tr.good td:first-child{box-shadow:inset 4px 0 var(--good)}
+.barc{position:relative;min-width:120px}
+.hb{position:absolute;left:8px;top:22%;height:56%;background:var(--accent);opacity:.2;border-radius:3px}
+.hv{position:relative}
+.legend{font-size:.85rem;color:var(--mute)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 12px 6px;overflow-x:auto}
+.chart svg{display:block;width:100%;height:auto;min-width:760px}
+.ax{font:11px var(--mono);fill:var(--mute)}.lb{font:600 11px var(--body);fill:var(--fg)}.ann{font:11px var(--body);fill:var(--mute)}
+.bv{fill:var(--accent2)}.bq{fill:var(--accent)}.grid{stroke:var(--line)}.mk{stroke:var(--mute);stroke-dasharray:3 3}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:680px){.two{grid-template-columns:1fr}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:8px;min-width:0;align-content:start}
+.br{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 68px;gap:8px;align-items:center;font-size:.9rem}
+.bt{background:var(--bg);border-radius:4px;height:12px;overflow:hidden}.bf{display:block;height:100%;background:var(--accent);border-radius:4px}
+.bn{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}.bn i{font-style:normal;color:var(--mute);font-size:.8rem}
+ul{margin:0;padding-left:20px;display:grid;gap:8px}
+.note{background:var(--warnbg);border-radius:10px;padding:14px 18px}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="eyebrow">Portal Vibra · Giovana Pavan · debriefing</div>
+<h1>A Chegada das Naves: quanto vendeu, quanto custou e quanto ficou</h1>
+<p class="sub">Pré-venda, Vivência Pleiadiana e Processo Iniciático, de 01/10 a 13/11/2026. Vendas da Hotmart e anúncios do Gerenciador da Meta.</p>
+</header>
+
+<section class="hero">
+<div><div class="eyebrow">Ficou para a Giovana</div><div class="big">R$ 101.001,22</div>
+<p class="sub">Depois das taxas da Hotmart, da comissão de 15% e do investimento em anúncios. Impostos da Giovana não entram nesta conta.</p></div>
+<div class="kpis">
+<div class="kpi"><b>R$ 141.283,72</b><span>faturamento: valor cheio de tudo que foi vendido</span></div>
+<div class="kpi"><b>R$ 5.800,07</b><span>investido em anúncios</span></div>
+<div class="kpi"><b>24,4x</b><span>de faturamento para cada real em anúncio</span></div>
+<div class="kpi"><b>71%</b><span>do faturamento ficou com ela</span></div>
+</div>
+</section>
+
+<section>
+<h2>Do faturamento ao bolso</h2>
+<div class="flow" role="img" aria-label="Divisão do faturamento">
+<span class="f1" style="flex:101001"></span><span class="f2" style="flex:34482"></span><span class="f3" style="flex:5800"></span></div>
+<p class="legend"><span class="sw" style="background:var(--good)"></span>ficou com a Giovana 71,5% · <span class="sw" style="background:var(--cut)"></span>Hotmart e comissão 24,4% · <span class="sw" style="background:var(--accent2)"></span>anúncios 4,1%</p>
+<div class="tw"><table><tbody>
+<tr class="sum"><td>Faturamento (valor cheio dos produtos)</td><td class="n">R$ 141.283,72</td><td class="w legend">288 vendas, cada uma pelo preço da oferta em que foi comprada</td></tr>
+<tr><td>(−) Taxas da Hotmart e comissão de 15%</td><td class="n">− R$ 34.482,43</td><td class="w legend">a Hotmart desconta primeiro as taxas dela (11,1% do faturamento); a comissão de 15% é calculada sobre o que sobra</td></tr>
+<tr class="sum"><td>Líquido da Giovana na Hotmart</td><td class="n">R$ 106.801,29</td><td class="w legend">R$ 101.426,44 já registrados e R$ 5.374,85 a receber nas parcelas de 6 vendas parceladas pela Hotmart</td></tr>
+<tr><td>(−) Investimento em anúncios</td><td class="n">− R$ 5.800,07</td><td class="w legend">campanhas de venda da Vivência e do Processo</td></tr>
+<tr class="win"><td>Ficou para a Giovana</td><td class="n">R$ 101.001,22</td><td class="w">lucro da campanha, antes dos impostos dela</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<h2>O que foi vendido</h2>
+<div class="tw"><table>
+<thead><tr><th>Produto e oferta</th><th>Quando</th><th class="n">Preço</th><th class="n">Vendas</th><th class="n">Faturamento</th></tr></thead>
+<tbody>
+<tr><td>Vivência Pleiadiana (ingresso)</td><td>08 a 24/10</td><td class="n">R$ 88</td><td class="n">174</td><td class="n">R$ 15.312,00</td></tr>
+<tr><td>Processo Iniciático · pré-venda</td><td>01 a 06/10</td><td class="n">R$ 1.421,60</td><td class="n">43</td><td class="n">R$ 61.128,80</td></tr>
+<tr><td>Processo Iniciático · condição especial</td><td>24 a 26/10</td><td class="n">R$ 1.599,30</td><td class="n">18</td><td class="n">R$ 28.787,40</td></tr>
+<tr><td>Processo Iniciático · preço cheio</td><td>27/10 a 13/11</td><td class="n">R$ 1.777</td><td class="n">17</td><td class="n">R$ 29.287,75</td></tr>
+<tr><td>Order bumps (comprados junto no checkout)</td><td>01/10 a 13/11</td><td class="n">vários</td><td class="n">36</td><td class="n">R$ 6.767,77</td></tr>
+<tr class="sum"><td>Total</td><td></td><td class="n"></td><td class="n">288</td><td class="n">R$ 141.283,72</td></tr>
+</tbody></table></div>
+<p class="legend">O Processo teve 78 compradores no total. No preço cheio, duas compras usaram cupom (5% e 20%) e uma entrou numa oferta em 10 vezes de R$ 1.300. Compras em euro, dólar e peso contam pelo preço em reais. Quatro compras da pré-venda entraram depois do dia 06, até 19/10.</p>
+<div class="tw"><table>
+<thead><tr><th>Order bump</th><th class="n">Vendas</th><th class="n">Faturamento</th><th>Comprado junto com</th></tr></thead>
+<tbody>
+<tr><td>Círculo Pleiadiano</td><td class="n">5</td><td class="n">R$ 4.973,78</td><td>4 na pré-venda do Processo, 1 na Vivência</td></tr>
+<tr><td>Arquitetura da Criação</td><td class="n">23</td><td class="n">R$ 1.715,03</td><td>13 na Vivência, 10 no Processo</td></tr>
+<tr><td>Ativação para trabalhar os seus medos</td><td class="n">8</td><td class="n">R$ 78,96</td><td>todas no Processo a preço cheio</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<h2>Vendas dia a dia</h2>
+<div class="chart"><svg viewBox="0 0 1020 240" role="img" aria-label="Vendas por dia de 01/10 a 13/11">
+<line class="grid" x1="40" y1="210" x2="1010" y2="210"></line>
+<line class="grid" x1="40" y1="149.3" x2="1010" y2="149.3" stroke-dasharray="2 4"></line><text class="ax" x="34" y="153.3" text-anchor="end">10</text>
+<line class="grid" x1="40" y1="88.6" x2="1010" y2="88.6" stroke-dasharray="2 4"></line><text class="ax" x="34" y="92.6" text-anchor="end">20</text>
+<rect class="bq" x="43" y="191.8" width="16" height="18.2"></rect>
+<rect class="bq" x="65" y="173.6" width="16" height="36.4"></rect>
+<rect class="bq" x="87" y="185.7" width="16" height="24.3"></rect>
+<rect class="bq" x="109" y="203.9" width="16" height="6.1"></rect>
+<rect class="bq" x="131" y="155.4" width="16" height="54.6"></rect>
+<text class="lb" x="139" y="151.4" text-anchor="middle">9</text>
+<rect class="bq" x="153" y="112.9" width="16" height="97.1"></rect>
+<text class="lb" x="161" y="108.9" text-anchor="middle">16</text>
+<rect class="bq" x="197" y="203.9" width="16" height="6.1"></rect>
+<rect class="bv" x="197" y="46.1" width="16" height="157.9"></rect>
+<text class="lb" x="205" y="42.1" text-anchor="middle">27</text>
+<rect class="bv" x="219" y="125.0" width="16" height="85.0"></rect>
+<text class="lb" x="227" y="121.0" text-anchor="middle">14</text>
+<rect class="bq" x="241" y="197.9" width="16" height="12.1"></rect>
+<rect class="bv" x="241" y="149.3" width="16" height="48.6"></rect>
+<text class="lb" x="249" y="145.3" text-anchor="middle">10</text>
+<rect class="bv" x="263" y="191.8" width="16" height="18.2"></rect>
+<rect class="bv" x="285" y="161.4" width="16" height="48.6"></rect>
+<text class="lb" x="293" y="157.4" text-anchor="middle">8</text>
+<rect class="bv" x="307" y="179.6" width="16" height="30.4"></rect>
+<rect class="bv" x="329" y="173.6" width="16" height="36.4"></rect>
+<rect class="bv" x="351" y="173.6" width="16" height="36.4"></rect>
+<rect class="bv" x="373" y="179.6" width="16" height="30.4"></rect>
+<rect class="bv" x="395" y="167.5" width="16" height="42.5"></rect>
+<text class="lb" x="403" y="163.5" text-anchor="middle">7</text>
+<rect class="bv" x="417" y="173.6" width="16" height="36.4"></rect>
+<rect class="bq" x="439" y="203.9" width="16" height="6.1"></rect>
+<rect class="bv" x="439" y="125.0" width="16" height="78.9"></rect>
+<text class="lb" x="447" y="121.0" text-anchor="middle">14</text>
+<rect class="bv" x="461" y="112.9" width="16" height="97.1"></rect>
+<text class="lb" x="469" y="108.9" text-anchor="middle">16</text>
+<rect class="bv" x="483" y="131.1" width="16" height="78.9"></rect>
+<text class="lb" x="491" y="127.1" text-anchor="middle">13</text>
+<rect class="bv" x="505" y="167.5" width="16" height="42.5"></rect>
+<text class="lb" x="513" y="163.5" text-anchor="middle">7</text>
+<rect class="bv" x="527" y="64.3" width="16" height="145.7"></rect>
+<text class="lb" x="535" y="60.3" text-anchor="middle">24</text>
+<rect class="bq" x="549" y="191.8" width="16" height="18.2"></rect>
+<rect class="bv" x="549" y="149.3" width="16" height="42.5"></rect>
+<text class="lb" x="557" y="145.3" text-anchor="middle">10</text>
+<rect class="bq" x="571" y="161.4" width="16" height="48.6"></rect>
+<text class="lb" x="579" y="157.4" text-anchor="middle">8</text>
+<rect class="bq" x="593" y="167.5" width="16" height="42.5"></rect>
+<text class="lb" x="601" y="163.5" text-anchor="middle">7</text>
+<rect class="bq" x="615" y="197.9" width="16" height="12.1"></rect>
+<rect class="bq" x="681" y="203.9" width="16" height="6.1"></rect>
+<rect class="bq" x="747" y="191.8" width="16" height="18.2"></rect>
+<rect class="bq" x="835" y="203.9" width="16" height="6.1"></rect>
+<rect class="bq" x="945" y="197.9" width="16" height="12.1"></rect>
+<rect class="bq" x="967" y="179.6" width="16" height="30.4"></rect>
+<rect class="bq" x="989" y="191.8" width="16" height="18.2"></rect>
+<text class="ax" x="51" y="226" text-anchor="middle">01/10</text>
+<text class="ax" x="139" y="226" text-anchor="middle">05/10</text>
+<text class="ax" x="227" y="226" text-anchor="middle">09/10</text>
+<text class="ax" x="315" y="226" text-anchor="middle">13/10</text>
+<text class="ax" x="403" y="226" text-anchor="middle">17/10</text>
+<text class="ax" x="491" y="226" text-anchor="middle">21/10</text>
+<text class="ax" x="579" y="226" text-anchor="middle">25/10</text>
+<text class="ax" x="667" y="226" text-anchor="middle">29/10</text>
+<text class="ax" x="755" y="226" text-anchor="middle">02/11</text>
+<text class="ax" x="843" y="226" text-anchor="middle">06/11</text>
+<text class="ax" x="931" y="226" text-anchor="middle">10/11</text>
+<line class="mk" x1="51" y1="18" x2="51" y2="210"></line><text class="ann" x="55" y="24">01/10 pré-venda</text>
+<line class="mk" x1="205" y1="32" x2="205" y2="210"></line><text class="ann" x="209" y="38">08/10 abre a Vivência</text>
+<line class="mk" x1="557" y1="18" x2="557" y2="210"></line><text class="ann" x="561" y="24">24/10 Vivência ao vivo</text>
+<line class="mk" x1="997" y1="32" x2="997" y2="210"></line><text class="ann" x="1001" y="38">13/11</text>
+</svg></div>
+<p class="legend"><span class="sw" style="background:var(--accent2)"></span>ingressos da Vivência · <span class="sw" style="background:var(--accent)"></span>inscrições no Processo. Os picos: 08/10 (abertura, 26 ingressos), 06/10 (último dia da pré-venda, 16 inscrições), 23/10 (véspera, 24 ingressos) e 25 e 26/10 (15 inscrições depois da Vivência). Nos três últimos dias do carrinho entraram mais 10.</p>
+</section>
+
+<section>
+<h2>De onde vieram as vendas</h2>
+<div class="two">
+<div class="box"><h3>Vivência · 174 ingressos</h3><div class="br"><span class="bl">Sem UTM (quase tudo da abertura)</span><span class="bt"><span class="bf" style="width:100%"></span></span><span class="bn">69 <i>40%</i></span></div>
+<div class="br"><span class="bl">Anúncio</span><span class="bt"><span class="bf" style="width:54%"></span></span><span class="bn">37 <i>21%</i></span></div>
+<div class="br"><span class="bl">Grupo de WhatsApp</span><span class="bt"><span class="bf" style="width:48%"></span></span><span class="bn">33 <i>19%</i></span></div>
+<div class="br"><span class="bl">ManyChat</span><span class="bt"><span class="bf" style="width:16%"></span></span><span class="bn">11 <i>6%</i></span></div>
+<div class="br"><span class="bl">Disparo de WhatsApp</span><span class="bt"><span class="bf" style="width:12%"></span></span><span class="bn">8 <i>5%</i></span></div>
+<div class="br"><span class="bl">Vitrine da Hotmart</span><span class="bt"><span class="bf" style="width:12%"></span></span><span class="bn">8 <i>5%</i></span></div>
+<div class="br"><span class="bl">Link na bio</span><span class="bt"><span class="bf" style="width:10%"></span></span><span class="bn">7 <i>4%</i></span></div>
+<div class="br"><span class="bl">Acesso direto</span><span class="bt"><span class="bf" style="width:1%"></span></span><span class="bn">1 <i>1%</i></span></div></div>
+<div class="box"><h3>Processo depois da Vivência · 35 inscrições</h3><div class="br"><span class="bl">Grupo de WhatsApp</span><span class="bt"><span class="bf" style="width:100%"></span></span><span class="bn">13 <i>37%</i></span></div>
+<div class="br"><span class="bl">Sem UTM</span><span class="bt"><span class="bf" style="width:77%"></span></span><span class="bn">10 <i>29%</i></span></div>
+<div class="br"><span class="bl">Link na bio</span><span class="bt"><span class="bf" style="width:38%"></span></span><span class="bn">5 <i>14%</i></span></div>
+<div class="br"><span class="bl">ManyChat</span><span class="bt"><span class="bf" style="width:23%"></span></span><span class="bn">3 <i>9%</i></span></div>
+<div class="br"><span class="bl">Atendimento individual</span><span class="bt"><span class="bf" style="width:23%"></span></span><span class="bn">3 <i>9%</i></span></div>
+<div class="br"><span class="bl">Anúncio</span><span class="bt"><span class="bf" style="width:8%"></span></span><span class="bn">1 <i>3%</i></span></div></div>
+</div>
+<ul>
+<li><b>Todas as vendas estão contadas, com ou sem UTM.</b> "Sem UTM" quer dizer só que a Hotmart não registrou por qual link a pessoa chegou.</li>
+<li><b>Na Vivência, 62 das 69 vendas sem UTM são da abertura</b> (08 a 13/10), quando os links ainda não tinham UTM. O Gerenciador mostra que boa parte delas veio do anúncio: ele conta 123 compras nas campanhas da Vivência, e a UTM confirma 37.</li>
+<li><b>As 43 inscrições da pré-venda não têm UTM.</b> Vieram do encontro de 01/10 e do grupo.</li>
+<li><b>27 das 35 pessoas que compraram o Processo depois do evento tinham comprado o ingresso.</b> De cada 100 ingressos, 16 viraram Processo.</li>
+</ul>
+</section>
+
+<section>
+<h2>Anúncios</h2>
+<div class="kpis">
+<div class="kpi"><b>R$ 5.800,07</b><span>investidos: R$ 4.999,68 na Vivência e R$ 800,39 no Processo</span></div>
+<div class="kpi"><b>128</b><span>compras atribuídas pelo Gerenciador (123 e 5)</span></div>
+<div class="kpi"><b>R$ 40,65</b><span>custo por compra nas campanhas da Vivência (ingresso de R$ 88)</span></div>
+<div class="kpi"><b>R$ 29.853</b><span>em compras atribuídas aos anúncios, 5,1 vezes o investido</span></div>
+</div>
+<h3>Criativos da Vivência, do mais clicado ao menos</h3>
+<div class="tw"><table>
+<thead><tr><th>Criativo</th><th class="n">Cliques no link</th><th class="n">Visitas à página</th><th class="n">Investido</th><th class="n">Compras</th><th class="n">Custo por compra</th><th class="n">Valor das compras</th></tr></thead>
+<tbody><tr><td>VID- 05</td><td class="n barc"><span class="hb" style="width:100%"></span><span class="hv">301</span></td><td class="n">216</td><td class="n">R$ 292,06</td><td class="n">8</td><td class="n">R$ 36,51</td><td class="n">R$ 694</td></tr>
+<tr><td>VID- 04 - 1</td><td class="n barc"><span class="hb" style="width:81%"></span><span class="hv">243</span></td><td class="n">167</td><td class="n">R$ 559,69</td><td class="n">13</td><td class="n">R$ 43,05</td><td class="n">R$ 2.624</td></tr>
+<tr><td>VID- 01</td><td class="n barc"><span class="hb" style="width:61%"></span><span class="hv">185</span></td><td class="n">110</td><td class="n">R$ 501,61</td><td class="n">13</td><td class="n">R$ 38,59</td><td class="n">R$ 4.193</td></tr>
+<tr><td>VID- 06 - 1</td><td class="n barc"><span class="hb" style="width:61%"></span><span class="hv">185</span></td><td class="n">123</td><td class="n">R$ 299,95</td><td class="n">10</td><td class="n">R$ 29,99</td><td class="n">R$ 849</td></tr>
+<tr><td>VID- 04 - 2</td><td class="n barc"><span class="hb" style="width:57%"></span><span class="hv">173</span></td><td class="n">113</td><td class="n">R$ 450,17</td><td class="n">9</td><td class="n">R$ 50,02</td><td class="n">R$ 871</td></tr>
+<tr><td>07 - 2</td><td class="n barc"><span class="hb" style="width:56%"></span><span class="hv">170</span></td><td class="n">128</td><td class="n">R$ 489,08</td><td class="n">12</td><td class="n">R$ 40,76</td><td class="n">R$ 1.040</td></tr>
+<tr><td>EST- 3</td><td class="n barc"><span class="hb" style="width:56%"></span><span class="hv">168</span></td><td class="n">121</td><td class="n">R$ 418,08</td><td class="n">5</td><td class="n">R$ 83,62</td><td class="n">R$ 437</td></tr>
+<tr><td>VID- 06 - 2</td><td class="n barc"><span class="hb" style="width:55%"></span><span class="hv">166</span></td><td class="n">107</td><td class="n">R$ 301,30</td><td class="n">3</td><td class="n">R$ 100,43</td><td class="n">R$ 1.714</td></tr>
+<tr><td>EST- 4</td><td class="n barc"><span class="hb" style="width:54%"></span><span class="hv">162</span></td><td class="n">101</td><td class="n">R$ 498,50</td><td class="n">16</td><td class="n">R$ 31,16</td><td class="n">R$ 1.412</td></tr>
+<tr class="good"><td>EST- 2</td><td class="n barc"><span class="hb" style="width:53%"></span><span class="hv">160</span></td><td class="n">108</td><td class="n">R$ 470,65</td><td class="n">21</td><td class="n">R$ 22,41</td><td class="n">R$ 9.972</td></tr>
+<tr><td>AD - VID- 05 - ULTIMOS DIAS</td><td class="n barc"><span class="hb" style="width:51%"></span><span class="hv">153</span></td><td class="n">102</td><td class="n">R$ 211,11</td><td class="n">6</td><td class="n">R$ 35,19</td><td class="n">R$ 503</td></tr>
+<tr><td>VID- 02</td><td class="n barc"><span class="hb" style="width:32%"></span><span class="hv">96</span></td><td class="n">65</td><td class="n">R$ 271,64</td><td class="n">5</td><td class="n">R$ 54,33</td><td class="n">R$ 435</td></tr>
+<tr><td>03</td><td class="n barc"><span class="hb" style="width:9%"></span><span class="hv">28</span></td><td class="n">16</td><td class="n">R$ 52,82</td><td class="n">1</td><td class="n">R$ 52,82</td><td class="n">R$ 87</td></tr>
+<tr><td>07 - 3</td><td class="n barc"><span class="hb" style="width:7%"></span><span class="hv">22</span></td><td class="n">9</td><td class="n">R$ 99,52</td><td class="n">1</td><td class="n">R$ 99,52</td><td class="n">R$ 88</td></tr>
+<tr><td>07 - 4</td><td class="n barc"><span class="hb" style="width:2%"></span><span class="hv">6</span></td><td class="n">5</td><td class="n">R$ 46,98</td><td class="n">0</td><td class="n">sem compra</td><td class="n">0</td></tr>
+<tr><td>AD- EST- 02- ULTIMOS DIAS</td><td class="n barc"><span class="hb" style="width:1%"></span><span class="hv">4</span></td><td class="n">0</td><td class="n">R$ 16,40</td><td class="n">0</td><td class="n">sem compra</td><td class="n">0</td></tr>
+<tr><td>AD- EST- 04- ULTIMOS DIAS</td><td class="n barc"><span class="hb" style="width:0%"></span><span class="hv">1</span></td><td class="n">1</td><td class="n">R$ 20,12</td><td class="n">0</td><td class="n">sem compra</td><td class="n">0</td></tr></tbody></table></div>
+<p class="legend">O mais clicado foi o VID- 05 (301 cliques). O que mais vendeu foi o EST- 2: 21 compras a R$ 22,41 cada e R$ 9.972 em valor, porque parte de quem clicou nele comprou depois o Processo. VID- 01 e VID- 04 - 1 vêm em seguida, com 13 compras cada.</p>
+<h3>Criativos do Processo (campanha no ar de 28/10 a 13/11)</h3>
+<div class="tw"><table>
+<thead><tr><th>Criativo</th><th class="n">Cliques no link</th><th class="n">Visitas à página</th><th class="n">Investido</th><th class="n">Compras</th><th class="n">Custo por compra</th><th class="n">Valor das compras</th></tr></thead>
+<tbody><tr class="good"><td>stories-01-a-convocacao</td><td class="n barc"><span class="hb" style="width:100%"></span><span class="hv">157</span></td><td class="n">97</td><td class="n">R$ 279,41</td><td class="n">4</td><td class="n">R$ 69,85</td><td class="n">R$ 3.159</td></tr>
+<tr><td>stories-02-seu-lugar</td><td class="n barc"><span class="hb" style="width:58%"></span><span class="hv">91</span></td><td class="n">64</td><td class="n">R$ 152,42</td><td class="n">0</td><td class="n">sem compra</td><td class="n">0</td></tr>
+<tr><td>DfE7FB5lcxj</td><td class="n barc"><span class="hb" style="width:45%"></span><span class="hv">70</span></td><td class="n">46</td><td class="n">R$ 122,73</td><td class="n">1</td><td class="n">R$ 122,73</td><td class="n">R$ 1.777</td></tr>
+<tr><td>stories-05-a-ponte</td><td class="n barc"><span class="hb" style="width:37%"></span><span class="hv">58</span></td><td class="n">40</td><td class="n">R$ 110,29</td><td class="n">0</td><td class="n">sem compra</td><td class="n">0</td></tr>
+<tr><td>stories-04-chamado-da-encarnacao</td><td class="n barc"><span class="hb" style="width:29%"></span><span class="hv">45</span></td><td class="n">32</td><td class="n">R$ 76,66</td><td class="n">0</td><td class="n">sem compra</td><td class="n">0</td></tr>
+<tr><td>stories-03-funcao-equipe-de-solo</td><td class="n barc"><span class="hb" style="width:15%"></span><span class="hv">24</span></td><td class="n">17</td><td class="n">R$ 58,88</td><td class="n">0</td><td class="n">sem compra</td><td class="n">0</td></tr></tbody></table></div>
+<p class="legend">A campanha do Processo trouxe 5 compras (R$ 4.936) com R$ 800,39: custo de R$ 160,08 por compra de um produto de R$ 1.777. O stories-01 foi o mais clicado e o que mais vendeu.</p>
+</section>
+
+<section>
+<h2>Como ler estes números</h2>
+<ul>
+<li><b>Faturamento</b> é o valor cheio de cada oferta, inclusive nas vendas parceladas, que ainda estão sendo pagas.</li>
+<li><b>Taxas da Hotmart e comissão</b> saem do que a própria Hotmart registrou em cada venda. Nas 6 vendas parceladas pela Hotmart, as parcelas futuras foram projetadas pelo valor da primeira.</li>
+<li><b>Compras do Gerenciador</b> usam a atribuição padrão da Meta (7 dias depois do clique, 1 dia depois da visualização). Por isso o número é maior que o das vendas com UTM de anúncio.</li>
+<li><b>Fora desta conta:</b> impostos da Giovana, posts impulsionados para visitas ao perfil (R$ 1.325,49 de 15/09 a 29/10) e a campanha de seguidores.</li>
+</ul>
+<p class="legend">Fontes: exportação completa de vendas da Hotmart (Central Portal Vibra, 01/10 a 13/11/2026, status aprovada e completa, compras de teste excluídas) e Gerenciador de Anúncios da CA - Portal Vibra, lido em 16/11/2026.</p>
+</section>
+</main>
+</body>
+</html>
